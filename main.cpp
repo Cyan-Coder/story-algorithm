@@ -4,15 +4,16 @@
 int main() {
 	plot p;
 	p.createCast(10);
-	p.temp1();
-	p.temp2();
-	p.temp1();
-	p.temp2();
-	p.temp2();
-	p.temp2();
-	p.temp1();
-	p.temp2();
-	p.temp1();
-	p.temp1();
+
+	p.createSentance(p.t1);
+	p.createSentance(p.t2);
+	p.createSentance(p.t1);
+	p.createSentance(p.t2);
+	p.createSentance(p.t2);
+	p.createSentance(p.t2);
+	p.createSentance(p.t1);
+	p.createSentance(p.t1);
+	p.createSentance(p.t2);
+	p.createSentance(p.t1);
 	return 0;
 }

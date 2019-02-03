@@ -7,6 +7,24 @@ plot::plot() {
 	srand(seed);
 };
 
+void plot::createSentance(Template T) {
+	std::string plot;
+	for (int i = 0; i < T.Temp.size(); i++) {
+		switch(T.Temp[i]){
+		case ACTION				: plot += this->actions[rand() % this->actions.size()] + " "; break;
+		case COMPLETED_ACTION	: plot += this->completedActions[rand() % this->completedActions.size()] + " "; break;
+		case CHARACTER			: plot += this->cast[rand() % this->cast.size()] + " "; break;
+		case CHARACTER_POSSESIVE: plot += this->cast[rand() % this->cast.size()] + "'s "; break;
+		case OBJECT				: plot += this->objects[rand() % this->objects.size()] + " "; break;
+		case ADJECTIVE			: plot += this->adjectives[rand() % this->adjectives.size()] + " "; break;
+		//case LOCATION			: plot += ; break;
+		default					: plot += "oopsy "; break;
+		}
+	}
+	std::cout << plot << "\n";
+};
+
+
 void plot::createCast(int amount) {
 	srand(this->seed++);
 	for (int i = 0; i < amount; i++) {
@@ -25,7 +43,7 @@ void plot::createCast(int amount) {
 	}
 };
 
-void plot::temp1() {
+/*void plot::temp1() {
 	std::string plot;
 	int c1 = rand() % this->cast.size();
 	int c2 = rand() % this->cast.size();
@@ -50,4 +68,8 @@ void plot::temp2() {
 	plot += this->adjectives[rand() % this->adjectives.size()] + " ";
 	plot += this->objects[rand() % this->objects.size()] + ".";
 	std::cout << plot << "\n";
+};*/
+
+Template::Template(std::vector<templateElem> T) {
+	this->Temp = T;
 };

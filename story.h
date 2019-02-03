@@ -1,17 +1,15 @@
 #pragma once
 
 #include <vector>
-//#include <string>
 
-struct greekTragedy {
+struct plot {
 	unsigned int seed;
-	greekTragedy();
+	plot();
 	
 	std::vector<std::string> cast;
 
 
 	void createCast(int amount);
-	void createExpos();
 
 	std::vector<std::string> actions =			{"sold", "broke", "lost", "searched for", "repaired"};
 	std::vector<std::string> objects =			{"necklace", "book", "sword", "hat", "ring"};
@@ -19,9 +17,7 @@ struct greekTragedy {
 	std::vector<std::string> completedActions = { "has stolen", "has bought", "has found", "has discovered", "has looked at" };
 	void temp1();
 	void temp2();
-	void createMotMom();
-	void createClimax();
-	void createResol();
+	
 };
 /*
 struct plot {

@@ -2,18 +2,17 @@
 #include "story.h"
 
 int main() {
-
-	greekTragedy g;
-	g.createCast(10);
-	g.temp1();
-	g.temp2();
-	g.temp1();
-	g.temp2();
-	g.temp2();
-	g.temp1();
-	g.temp2();
-	g.temp1();
-	g.temp2();
-	g.temp1();
+	plot p;
+	p.createCast(10);
+	p.temp1();
+	p.temp2();
+	p.temp1();
+	p.temp2();
+	p.temp2();
+	p.temp2();
+	p.temp1();
+	p.temp2();
+	p.temp1();
+	p.temp1();
 	return 0;
 }
